@@ -4,3 +4,421 @@ Tables: YELP_USER, BUSINESS, BUSINESS_CATEGORY, REVIEW
 
 -------RESULTS---------
 q1 =>
+
+BUSIN AVG_RATING REVIEW_COUNT
+----- ---------- ------------
+B1	       2	    6
+B2    2.83333333	    6
+B23	       4	    6
+B24	       4	    6
+B3    2.16666667	    6
+B4    2.33333333	    6
+B5	       4	    6
+
+7 rows selected.
+
+************************************
+q2=>
+BUSIN BCT_I REVIEW_COUNT
+----- ----- ------------
+B5    BCT5	       6
+B23   BCT5	       6
+B2    BCT2	       6
+B4    BCT4	       6
+B1    BCT1	       6
+B26   BCT5	       6
+B25   BCT5	       6
+B6    BCT6	       6
+B24   BCT5	       6
+B3    BCT3	       6
+B27   BCT5	       5
+
+BUSIN BCT_I REVIEW_COUNT
+----- ----- ------------
+B28   BCT5	       5
+B22   BCT5	       5
+B8    BCT8	       2
+B9    BCT9	       2
+B7    BCT7	       2
+B10   BCT10	       2
+B12   BCT10	       1
+B11   BCT11	       1
+B17   BCT10	       1
+B13   BCT10	       1
+B21   BCT10	       1
+
+BUSIN BCT_I REVIEW_COUNT
+----- ----- ------------
+B14   BCT10	       1
+B19   BCT10	       1
+B16   BCT10	       1
+B18   BCT10	       1
+B15   BCT10	       1
+B20   BCT10	       1
+
+28 rows selected.
+***************************
+q3 =>
+YELP_ AVG(R.RATING)
+----- -------------
+Y1	 3.08333333
+Y7	 3.33333333
+Y3		3.5
+Y6	 3.58333333
+Y8	 3.33333333
+Y10		2.5
+Y2		3.5
+Y4	 3.66666667
+Y5	       3.75
+Y9	 3.33333333
+Y13		  5
+
+11 rows selected.
+**********************************
+q4=>
+BUSIN	   elite	AVG
+----- ---------- ----------
+B_NAME
+--------------------------------------------------------------------------------
+REVIEW_COUNT
+------------
+B23	       6	  4
+The Table
+	   6
+
+B25	       6	  4
+Breakfast Place
+	   6
+
+BUSIN	   elite	AVG
+----- ---------- ----------
+B_NAME
+--------------------------------------------------------------------------------
+REVIEW_COUNT
+------------
+
+B5	       6	  4
+SMITH THOMSON
+	   6
+
+B26	       6	  4
+Cafe Rosalena
+
+BUSIN	   elite	AVG
+----- ---------- ----------
+B_NAME
+--------------------------------------------------------------------------------
+REVIEW_COUNT
+------------
+	   6
+
+B4	       6 2.33333333
+Safelite AutoGlass
+	   6
+**********************************
+BUSIN
+-----
+B_NAME
+--------------------------------------------------------------------------------
+REVIEW_COUNT PERCENTABE
+------------ ----------
+B28
+Holder"s Country Inn
+	   5 .208333333
+
+B22
+Hobee"s
+	   5 .208333333
+
+BUSIN
+-----
+B_NAME
+--------------------------------------------------------------------------------
+REVIEW_COUNT PERCENTABE
+------------ ----------
+
+B27
+Southern Kitchen
+	   5 .166666667
+
+B3
+Pedley Richard Architect
+
+BUSIN
+-----
+B_NAME
+--------------------------------------------------------------------------------
+REVIEW_COUNT PERCENTABE
+------------ ----------
+	   6	      0
+
+B25
+Breakfast Place
+	   6	      0
+
+B1
+
+BUSIN
+-----
+B_NAME
+--------------------------------------------------------------------------------
+REVIEW_COUNT PERCENTABE
+------------ ----------
+Big Surf
+	   6	      0
+
+B2
+AirBorne COFFEE
+	   6	      0
+
+
+BUSIN
+-----
+B_NAME
+--------------------------------------------------------------------------------
+REVIEW_COUNT PERCENTABE
+------------ ----------
+B6
+Catch Your Big Break
+	   6	      0
+
+B24
+Top Nosh Cafe
+	   6	      0
+
+BUSIN
+-----
+B_NAME
+--------------------------------------------------------------------------------
+REVIEW_COUNT PERCENTABE
+------------ ----------
+
+B26
+Cafe Rosalena
+	   6	      0
+
+B4
+Safelite AutoGlass
+
+BUSIN
+-----
+B_NAME
+--------------------------------------------------------------------------------
+REVIEW_COUNT PERCENTABE
+------------ ----------
+	   6	      0
+
+B23
+The Table
+	   6	      0
+
+B5
+
+BUSIN
+-----
+B_NAME
+--------------------------------------------------------------------------------
+REVIEW_COUNT PERCENTABE
+------------ ----------
+SMITH THOMSON
+	   6	      0
+
+
+13 rows selected.
+******************************************
+q6 =>
+CATEGORY_NAME	     BUSIN
+-------------------- -----
+B_NAME
+--------------------------------------------------------------------------------
+AVG(R.RATING)	      RA
+------------- ----------
+Amusement Parks      B1
+Big Surf
+	    2	       1
+
+Architects	     B3
+Pedley Richard Architect
+   2.16666667	       1
+
+CATEGORY_NAME	     BUSIN
+-------------------- -----
+B_NAME
+--------------------------------------------------------------------------------
+AVG(R.RATING)	      RA
+------------- ----------
+
+Bars		     B14
+Alexs 49er Inn
+	    5	       1
+
+Bars		     B21
+Original Gravity Public House
+
+CATEGORY_NAME	     BUSIN
+-------------------- -----
+B_NAME
+--------------------------------------------------------------------------------
+AVG(R.RATING)	      RA
+------------- ----------
+	    5	       1
+
+Bars		     B17
+The Bears Cocktails
+	    5	       1
+
+Bars		     B15
+
+CATEGORY_NAME	     BUSIN
+-------------------- -----
+B_NAME
+--------------------------------------------------------------------------------
+AVG(R.RATING)	      RA
+------------- ----------
+Red Stag Lounge
+	    5	       1
+
+Bars		     B19
+Santa Cruz Wine Bar
+	    5	       1
+
+
+CATEGORY_NAME	     BUSIN
+-------------------- -----
+B_NAME
+--------------------------------------------------------------------------------
+AVG(R.RATING)	      RA
+------------- ----------
+Bars		     B20
+Firehouse No 1 Gastropub
+	    5	       1
+
+Bars		     B12
+Coffee Bar and Bistro
+	    5	       1
+
+CATEGORY_NAME	     BUSIN
+-------------------- -----
+B_NAME
+--------------------------------------------------------------------------------
+AVG(R.RATING)	      RA
+------------- ----------
+
+Bars		     B13
+Renegades
+	    5	       1
+
+Bars		     B16
+JJ"s Blues
+
+CATEGORY_NAME	     BUSIN
+-------------------- -----
+B_NAME
+--------------------------------------------------------------------------------
+AVG(R.RATING)	      RA
+------------- ----------
+	    5	       1
+
+Bars		     B18
+Trials Pub
+	    5	       1
+
+Breakfast and Brunch B28
+
+CATEGORY_NAME	     BUSIN
+-------------------- -----
+B_NAME
+--------------------------------------------------------------------------------
+AVG(R.RATING)	      RA
+------------- ----------
+Holder"s Country Inn
+	    5	       1
+
+Breakfast and Brunch B22
+Hobee"s
+	    5	       1
+
+
+CATEGORY_NAME	     BUSIN
+-------------------- -----
+B_NAME
+--------------------------------------------------------------------------------
+AVG(R.RATING)	      RA
+------------- ----------
+Burgers 	     B11
+In-N-Out Burger
+	    2	       1
+
+Career Counseling    B6
+Catch Your Big Break
+	  3.5	       1
+
+CATEGORY_NAME	     BUSIN
+-------------------- -----
+B_NAME
+--------------------------------------------------------------------------------
+AVG(R.RATING)	      RA
+------------- ----------
+
+Coffee Shops	     B7
+Bay Area Coffee Shop
+	  2.5	       1
+
+Food and More	     B8
+China Coffee Toffee
+
+CATEGORY_NAME	     BUSIN
+-------------------- -----
+B_NAME
+--------------------------------------------------------------------------------
+AVG(R.RATING)	      RA
+------------- ----------
+	  2.5	       1
+
+Gymnastics	     B2
+AirBorne COFFEE
+   2.83333333	       1
+
+Pool Cleaners	     B9
+
+CATEGORY_NAME	     BUSIN
+-------------------- -----
+B_NAME
+--------------------------------------------------------------------------------
+AVG(R.RATING)	      RA
+------------- ----------
+Hastings Water Works
+	  2.5	       1
+
+Windshield	     B4
+Safelite AutoGlass
+   2.33333333	       1
+
+
+21 rows selected.
+*****************************************
+q7 =>
+YELP_	     AGE
+----- ----------
+Y11    36.193182
+*****************************************
+q8 =>
+B_NAME
+--------------------------------------------------------------------------------
+Bay Area Coffee Shop
+China Coffee Toffee
+Coffee Bar and Bistro
+******************************************
+q9 =>
+no rows selected
+******************************************
+q10 =>
+YELP_ F_NAME		   ST
+----- -------------------- --
+Y13   Kelley		   VA
+Y13   Kelley		   CA
+Y13   Kelley		   AZ
+Y13   Kelley		   OH
+
+
+-------------end--------------

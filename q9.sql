@@ -1,6 +1,5 @@
 -- List all 5-star businesses that have been reviewed by any users between the ages of 15 and
 -- 25. A 5-star business is a business which has an average review rating of 5.
---DONE
 
 CREATE FUNCTION AGE(DOB IN DATE)
     RETURN NUMBER

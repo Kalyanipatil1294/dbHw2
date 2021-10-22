@@ -1,5 +1,5 @@
 -- Find the oldest user who never reviewed any businesses.
--- done
+
 CREATE FUNCTION AGE(DOB IN DATE)
     RETURN NUMBER
         IS AGE NUMBER;

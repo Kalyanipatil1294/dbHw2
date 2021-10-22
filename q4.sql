@@ -4,12 +4,4 @@
 -- business id, business name, business review count, average rating, and the count of the `elite'
 -- users for the particular business.
 
-
-SELECT B.BUSINESS_ID, B.B_NAME, B.COUNT, AVG(R.RATING), COUNT(R.AUTHOR)
-FROM BUSINESS B, REVIEW R
-WHERE B.BID=R.BUSINESSID AND B.CITY='SAN JOSE' AND B.STATE='CA' AND R.AUTHOR IN( SELECT R1.AUTHOR
-                                                                                 FROM REVIEW R1
-                                                                                 GROUP BY R1.AUTHOR
-                                                                                 HAVING COUNT(*) >= 10)
-GROUP BY B.BID, B.NAME, B.COUNT
-HAVING COUNT(*) > 5;
+SELECT * FROM (SELECT R.BUSINESS_NO, COUNT(R.BUSINESS_NO) AS "elite", AVG (R.RATING) AS AVG, B.B_NAME, B.REVIEW_COUNT FROM REVIEW R JOIN BUSINESS B ON B.BUSINESS_ID=R.BUSINESS_NO WHERE R.AUTHOR IN (SELECT AUTHOR FROM REVIEW R GROUP BY AUTHOR HAVING COUNT(AUTHOR) >= 10) GROUP BY R.BUSINESS_NO, B.B_NAME, B.REVIEW_COUNT ORDER BY "elite" DESC) WHERE ROWNUM <= 5;

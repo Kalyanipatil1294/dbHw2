@@ -2,8 +2,6 @@
 -- 5, and have been reviewed at least 5 times. Results should be ordered by the percentage in
 -- descending order. Return for the top 5 businesses, the business id, business name, review
 -- count, and percentage of reviews with rating of 5.
---done
-
 
 ALTER TABLE BUSINESS add REVIEW_COUNT int;
 UPDATE BUSINESS
