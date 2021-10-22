@@ -1,8 +1,5 @@
 -- Get the review counts for businesses in each business category. Results should be sorted by
 -- the review counts in descending order.
-select COUNT(BUSINESS_ID) from BUSINESS;
-select COUNT(B_CAT_ID) AS ReviewCount from BUSINESS_CATEGORY;
-SELECT B.BUSINESS_ID
-FROM BUSINESS B, REVIEW R
-WHERE
-GROUP BY B.BUSINESS_ID
+--done
+
+SELECT B.BUSINESS_ID, B.BCT_ID, COUNT(*) as Review_Count FROM  BUSINESS_CATEGORY CAT INNER JOIN BUSINESS B ON CAT.B_CAT_ID = B.BCT_ID INNER JOIN REVIEW R ON R.BUSINESS_NO = B.BUSINESS_ID GROUP BY B.BUSINESS_ID, B.BCT_ID ORDER BY COUNT(*) DESC;
